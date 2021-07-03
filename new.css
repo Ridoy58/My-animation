@@ -1,0 +1,194 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.animation{
+  background: url(https://i.ibb.co/tDpL6jq/black.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+ 
+}
+.water{
+  position: absolute;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ width: 500%;
+ height:366px;
+ display: block;
+ animation: sky 15s linear reverse infinite;
+ background: url(https://i.ibb.co/FxXQ1sT/water.jpg) repeat-x ;
+ overflow: hidden;
+}
+
+@keyframes water{
+  100% {
+ transform: translateX(-3400px);
+  }
+
+}
+
+.sky{
+  width: 500%;
+  height: 350px;
+  background: url(https://i.ibb.co/WcBpkV9/sky.jpg) repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+ z-index: 1;
+ animation: sky 10s linear infinite;
+
+}
+@keyframes sky{
+  100% {
+ transform: translateX(-3400px);
+  }
+
+}
+.air {
+  width: 18%;
+  position: absolute;
+  top: 5%;
+ right:0px;
+ left: 0px;
+  z-index: 2;
+  animation: air 12s linear infinite;
+}
+.air img {
+  width: 80%;
+}
+@keyframes air{
+  
+  100%{
+    transform: translateX(500%);
+  }
+ 
+}
+.city {
+  position: absolute;
+  top: 173px;
+  right: 0px;
+  width: 500%;
+  height: 200px;
+  z-index: 3;
+  display: block;
+  background: url(https://i.ibb.co/M5sVcyB/city-png-removebg-preview.png) repeat-x;
+}
+.boat img {
+  width: 80%;
+  -webkit-box-reflect:below 0 linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.6));
+  
+}
+.boat {
+  width: 25%;
+  position: absolute;
+  left: 0px;
+  right: 0;
+  z-index: 4;
+  top: 160px;
+  animation: boat 12s linear  reverse infinite;
+}
+
+@keyframes boat {
+  100%{
+    transform: translateX(500%);
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width:1500px){
+  .water {
+    height: 339px;
+  }
+}
+@media (max-width:1400px) {
+  .boat {
+    top: 180px;
+  }
+  .water {
+      height: 316px;
+  }
+  .animation {
+    height: 97vh;
+  }
+}
+@media(max-width:1290px){
+  .boat {
+    top: 230px;
+  }
+  .water {
+    height: 295px;
+  }
+  .animation {
+    height: 94vh;
+  }
+}
+@media(max-width:992px){
+  .boat {
+    top: 260px
+  }
+  .sky {
+    width: 560%;
+  }
+  .water {
+    width: 560%;
+    height: 230px;
+  }
+  .animation {
+    height: 85vh;
+  }
+  .boat img {
+    width: 100%;
+  }
+  .air img {
+    width: 100%;
+  }
+ 
+}
+@media(max-width:768px){
+  .boat {
+    top: 282px;
+    width: 30%;
+  }
+  .boat img {
+    width: 100%;
+  }
+  .water {
+    width: 700%;
+  }
+  .sky {
+    width: 700%;
+  }
+  .air {
+    width: 35%;
+  }
+}
+
+@media (max-width:576px) {
+  .water {
+    width: 1000%;
+  }
+  .sky {
+    width: 1000%;
+  }
+  .boat {
+    width: 40%;
+    top: 296px;
+  }
+  
+}
+@media (max-width:380px) {
+  .water {
+    width: 1150%;
+  }
+  .sky {
+    width: 1150%;
+  }
+}
